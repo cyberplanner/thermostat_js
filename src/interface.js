@@ -46,5 +46,6 @@ $(document).ready(function() {
       $("#local-temp").text(data.main.temp);
     });
   }
+  
 
 });

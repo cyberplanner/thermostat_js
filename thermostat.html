@@ -22,7 +22,7 @@
       <div class="col-md-12">
         <section class="text-center">
           <h1>Temperature <span id="temperature"></span><span id="degrees">&#8451</span></h1>
-          <button class="btn btn-default btn-cntroller" id="up"><i class="fa fa-plus"></i></button>
+          <button class="btn btn-default btn-cntroller" id="up" data-toggle="tooltip" title="Up" data-placement="bottom"><i class="fa fa-plus"></i></button>
           <button class="btn btn-default btn-cntroller" id="down"><i class="fa fa-minus"></i></button>
           <button class="btn btn-default btn-cntroller" id="reset"><i class="fa fa-refresh"></i></button>
           <h4>Power Saving Mode <span id="power-saving-mode">On</span></h4>
@@ -51,6 +51,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="src/interface.js"></script>
     <script src="src/Thermostat.js"></script>
+    <!-- <script type="text/javascript">
+        $(function () {
+            $("[rel='tooltip']").tooltip();
+        });
+    </script> -->
   </body>
 
 </html>
