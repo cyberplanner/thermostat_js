@@ -17,6 +17,16 @@
       <button id="power-save-off">Power Save Off</button>
     </section>
 
+    <section>
+      <h2>Current Local Temperature: <span id="local-temp"></span>&#8451</h2>
+
+      <form id="select-city">
+        <h3>Please enter your location</h3>
+        <input type="text" id="current-city" placeholder="Enter a city"/>
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="src/interface.js"></script>
     <script src="src/Thermostat.js"></script>
