@@ -3,12 +3,12 @@
 
   <head>
     <title>Thermostat</title>
-
+    <link rel="stylesheet" href="css/main.css" />
   </head>
 
   <body>
     <section>
-      <h1>Temperature <span id="temperature"></span>&#8451</h1>
+      <h1>Temperature <span id="temperature"></span><span id="degrees">&#8451</span></h1>
       <button id="up">+</button>
       <button id="down">-</button>
       <button id="reset">reset</button>
@@ -17,9 +17,9 @@
       <button id="power-save-off">Power Save Off</button>
     </section>
 
-    <script src="src/Thermostat.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="src/interface.js"></script>
+    <script src="src/Thermostat.js"></script>
   </body>
 
 </html>
