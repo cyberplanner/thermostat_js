@@ -75,6 +75,27 @@ describe('Thermostat' , function(){
     });
   });
 
+  describe('Display colours:', function() {
+    it('Yellow under 25 and over 18', function() {
+      expect(thermostat.getDisplayColor()).toEqual('mid-usage');
+    });
+
+    it('Green under 18 degrees', function() {
+      for(var i = 0; i < 3; i++) {
+        thermostat.down();
+      }
+      expect(thermostat.getDisplayColor()).toEqual('low-usage');
+    });
+
+    it('Red over 25 degrees', function() {
+      for(var i = 0; i < 6; i++) {
+        thermostat.up();
+      }
+      expect(thermostat.getDisplayColor()).toEqual('high-usage');
+    });
+  });
+
+
 
 
 });

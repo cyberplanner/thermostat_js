@@ -56,3 +56,12 @@ Thermostat.prototype.down = function () {
 Thermostat.prototype.reset = function() {
   this.temperature = this.DEFAULT_TEMPERATURE;
 };
+
+Thermostat.prototype.getDisplayColor = function () {
+  if(this.getCurrentTemperature() < 18) {
+    return 'low-usage';
+  } else if(this.getCurrentTemperature() < 25 && this.getCurrentTemperature() > 18) {
+    return 'mid-usage';
+  }
+  return 'high-usage';
+};
