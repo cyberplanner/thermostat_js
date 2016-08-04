@@ -1,3 +1,7 @@
+body {
+  margin: 50px auto;
+}
+
 .low-usage {
   color: green;
 }
@@ -10,11 +14,11 @@
   color: red;
 }
 
-h1 {
+h1, .h1{
   font-family: 'Pacifico', cursive;
 }
 
-h2, h3, h4, h5 {
+h2, h3, h4, h5, .h2, .h2, .h3, .h4, .h5 {
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -25,4 +29,14 @@ h2, h3, h4, h5 {
 
 .btn {
   display: inline-block;
+}
+
+.btn-size {
+  width: 150px;
+  height: 40px;
+}
+
+.btn-cntroller {
+  width: 50px;
+  height: 50px;
 }
