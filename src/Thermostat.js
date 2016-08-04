@@ -5,20 +5,21 @@ function Thermostat() {
   this.MAX_TEMP_PSM_OFF = 32;
   this.MAX_TEMP_PSM_ON = 25;
   this.MINIMUM_TEMPERATURE = 10;
+  this.LOW_USAGE_TEMP = 18;
   this.temperature = 20;
   this.powerSavingMode = true;
-};
+}
 
 Thermostat.prototype.getCurrentTemperature = function () {
-  return this.temperature
+  return this.temperature;
 };
+
 Thermostat.prototype.isPowerSavingOn = function () {
-  return this.powerSavingMode
+  return this.powerSavingMode;
 };
 
 Thermostat.prototype.powerSavingOn = function () {
   this.powerSavingMode = true;
-
 };
 
 Thermostat.prototype.powerSavingOff = function () {
@@ -37,14 +38,12 @@ Thermostat.prototype.isMaximumTemperature = function () {
   return this.temperature === this.MAX_TEMP_PSM_ON;
 };
 
-
 Thermostat.prototype.up = function () {
   if(this.isMaximumTemperature()) {
     return;
   }
   this.temperature += 1;
 };
-
 
 Thermostat.prototype.down = function () {
   if(this.isMinimumTemperature()) {
@@ -58,9 +57,9 @@ Thermostat.prototype.reset = function() {
 };
 
 Thermostat.prototype.getDisplayColor = function () {
-  if(this.getCurrentTemperature() < 18) {
+  if(this.getCurrentTemperature() < this.LOW_USAGE_TEMP) {
     return 'low-usage';
-  } else if(this.getCurrentTemperature() < 25 && this.getCurrentTemperature() > 18) {
+  } else if(this.getCurrentTemperature() < this.MAX_TEMP_PSM_ON && this.getCurrentTemperature() > this.LOW_USAGE_TEMP) {
     return 'mid-usage';
   }
   return 'high-usage';
