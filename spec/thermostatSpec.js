@@ -80,7 +80,7 @@ describe('Thermostat' , function(){
       expect(thermostat.getDisplayColor()).toEqual('mid-usage');
     });
 
-    it('Green under 18 degrees', function() {
+    it('Green under/equal 18 degrees', function() {
       for(var i = 0; i < 3; i++) {
         thermostat.down();
       }
