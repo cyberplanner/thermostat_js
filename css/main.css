@@ -9,3 +9,20 @@
 .high-usage {
   color: red;
 }
+
+h1 {
+  font-family: 'Pacifico', cursive;
+}
+
+h2, h3, h4, h5 {
+  font-family: 'Open Sans', sans-serif;
+}
+
+#current-city {
+  display: inline-block;
+  max-width: 250px;
+}
+
+.btn {
+  display: inline-block;
+}

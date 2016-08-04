@@ -4,28 +4,46 @@
   <head>
     <title>Thermostat</title>
     <link rel="stylesheet" href="css/main.css" />
+    <link type="image/png" rel="icon" href="img/favicon.png">
+
+    <!-- Bootstrap Core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Jquery UI  -->
+    <link type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/redmond/jquery-ui.css" rel="stylesheet" />
+
+    <!-- Custom Fonts -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Pacifico|Open+Sans|Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
   </head>
 
   <body>
-    <section>
-      <h1>Temperature <span id="temperature"></span><span id="degrees">&#8451</span></h1>
-      <button id="up">+</button>
-      <button id="down">-</button>
-      <button id="reset">reset</button>
-      <h4>Power Saving Mode <span id="power-saving-mode">On</span></h4>
-      <button id="power-save-on">Power Save On</button>
-      <button id="power-save-off">Power Save Off</button>
-    </section>
+    <div class="row">
+      <div class="col-md-12">
+        <section class="text-center">
+          <h1>Temperature <span id="temperature"></span><span id="degrees">&#8451</span></h1>
+          <button class="btn btn-default" id="up">+</button>
+          <button class="btn btn-default" id="down">-</button>
+          <button class="btn btn-default" id="reset">reset</button>
+          <h4>Power Saving Mode <span id="power-saving-mode">On</span></h4>
+          <button class="btn btn-danger" id="power-save-on">Power Save On <i class="fa fa-flash"></i></button>
+          <button class="btn btn-success" id="power-save-off">Power Save Off <i class="fa fa-power-off"></i></button>
+        </section>
 
-    <section>
-      <h2>Current Local Temperature: <span id="local-temp"></span>&#8451</h2>
+        <section class="text-center">
+          <h2>Current Local Temperature: <span id="local-temp"></span>&#8451</h2>
+          <div class="form-froup">
+            <h3>Please enter your location</h3>
+            <form id="select-city" class="form-inline">
+              <input type="text" class="form-control" id="current-city" placeholder="Enter a city"/>
+              <button class="btn btn-primary" type="submit">Submit</button>
+            </form>
+          </div>
 
-      <form id="select-city">
-        <h3>Please enter your location</h3>
-        <input type="text" id="current-city" placeholder="Enter a city"/>
-        <button type="submit">Submit</button>
-      </form>
-    </section>
+        </section>
+      </div>
+    </div>
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="src/interface.js"></script>
