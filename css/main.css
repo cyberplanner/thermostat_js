@@ -1,5 +1,19 @@
 body {
-  margin: 50px auto;
+  background-color: #9999;
+}
+
+.heading {
+  font-family: 'Pacifico', cursive;
+  font-size: 60px;
+  margin: 20px auto 40px;
+}
+
+.reg-text {
+  font-family: 'Open Sans', sans-serif;
+}
+
+#power-saving-mode {
+  color: red;
 }
 
 .low-usage {
@@ -14,24 +28,8 @@ body {
   color: red;
 }
 
-h1, .h1{
-  font-family: 'Pacifico', cursive;
-}
 
-h2, h3, h4, h5, .h2, .h2, .h3, .h4, .h5 {
-  font-family: 'Open Sans', sans-serif;
-}
-
-#current-city {
-  display: inline-block;
-  max-width: 250px;
-}
-
-.btn {
-  display: inline-block;
-}
-
-.btn-size {
+.btn-resize {
   width: 150px;
   height: 40px;
 }

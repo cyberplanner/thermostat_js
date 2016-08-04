@@ -1,4 +1,6 @@
 $(document).ready(function() {
+  $("body").tooltip({ selector: '[data-toggle=tooltip]' });
+
   var thermostat = new Thermostat();
   updateTemperature();
 
@@ -46,6 +48,6 @@ $(document).ready(function() {
       $("#local-temp").text(data.main.temp);
     });
   }
-  
+
 
 });
