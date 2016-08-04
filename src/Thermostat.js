@@ -57,7 +57,7 @@ Thermostat.prototype.reset = function() {
 };
 
 Thermostat.prototype.getDisplayColor = function () {
-  if(this.getCurrentTemperature() < this.LOW_USAGE_TEMP) {
+  if(this.getCurrentTemperature() <= this.LOW_USAGE_TEMP) {
     return 'low-usage';
   } else if(this.getCurrentTemperature() < this.MAX_TEMP_PSM_ON && this.getCurrentTemperature() > this.LOW_USAGE_TEMP) {
     return 'mid-usage';
